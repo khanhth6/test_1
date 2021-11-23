@@ -1,0 +1,51 @@
+  // IntelliJ API Decompiler stub source generated from a class file
+  // Implementation of methods is not available
+
+package algebra.instances.array;
+
+@scala.reflect.ScalaSignature(bytes = "\u0006\u0001m9Qa\u0001\u0003\t\u0002-1Q!\u0004\u0003\t\u00029AQ!G\u0001\u0005\u0002i\tq\u0001]1dW\u0006<WM\u0003\u0002\u0006\r\u0005)\u0011M\u001D:bs*\u0011q\u0001C\u0001\nS:\u001CH/\u00198dKNT\u0011!C\u0001\bC2<WM\u0019:b\u0007\u0001\u0001\"\u0001D\u0001\u000E\u0003\u0011\u0011q\u0001]1dW\u0006<WmE\u0002\u0002\u001FU\u0001\"\u0001E\n\u000E\u0003EQ\u0011AE\u0001\u0006g\u000E\fG.Y\u0005\u0003)E\u0011a!\u00118z%\u00164\u0007C\u0001\f\u0018\u001B\u00051\u0011B\u0001\r\u0007\u00059\t%O]1z\u0013:\u001CH/\u00198dKN\fa\u0001P5oSRtD#A\u0006")
+public final class $$package /* Real name is 'package' */ {
+    public static <A> cats.kernel.PartialOrder<java.lang.Object> arrayPartialOrder(cats.kernel.PartialOrder<A> evidence$3) { /* compiled code */ }
+
+    public static <A> cats.kernel.Order<java.lang.Object> arrayOrder(cats.kernel.Order<A> evidence$2) { /* compiled code */ }
+
+    public static <A> cats.kernel.Eq<java.lang.Object> arrayEq(cats.kernel.Eq<A> evidence$1) { /* compiled code */ }
+}
+
+
+
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package org.apache.spark.sql.streaming;
+
+import java.util.Locale;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class JavaOutputModeSuite {
+
+  @Test
+  public void testOutputModes() {
+    OutputMode o1 = OutputMode.Append();
+    Assert.assertTrue(o1.toString().toLowerCase(Locale.ROOT).contains("append"));
+    OutputMode o2 = OutputMode.Complete();
+    Assert.assertTrue(o2.toString().toLowerCase(Locale.ROOT).contains("complete"));
+  }
+}
+
