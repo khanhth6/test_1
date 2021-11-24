@@ -1,0 +1,26 @@
+@DeveloperApi
+@Retention(RetentionPolicy.RUNTIME)
+public @interface ExpressionDescription {
+    String usage() default "";
+    /**
+     * @deprecated This field is deprecated as of Spark 3.0. Use {@link #arguments},
+     *   {@link #examples}, {@link #note}, {@link #since} and {@link #deprecated} instead
+     *   to document the extended usage.
+     */
+    @Deprecated
+    String extended() default "";
+    String arguments() default "";
+    String examples() default "";
+    String note() default "";
+    /**
+     * Valid group names are almost the same with one defined as `groupname` in
+     * `sql/functions.scala`. But, `collection_funcs` is split into fine-grained three groups:
+     * `array_funcs`, `map_funcs`, and `json_funcs`. See `ExpressionInfo` for the
+     * detailed group names.
+     */
+    String group() default "";
+    String since() default "";
+    String deprecated() default "";
+    String source() default "built-in";
+}
+
